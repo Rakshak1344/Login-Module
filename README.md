@@ -1,16 +1,37 @@
-# auth
+# Login Auth
 
-A new Flutter project.
+Login Module
 
-## Getting Started
+## API reference
 
-This project is a starting point for a Flutter application.
+base url https://task-auth-endpoint-api.herokuapp.com
 
-A few resources to get you started if this is your first Flutter project:
+# Routes and input
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+## POST
+/users - Creates user signup. Inputs->(name,email,password,age) <br />
+/users/login - Login action signin. Inputs->(email,password) <br />
+/users/logout - Logouts current user. <br />
+/users/logoutAll - Logouts all devices of the user. <br />
+/users/me/avatar - Upload user avatar(Key is avatar). <br />
+/tasks - Add task. Inputs->(description,completed(type-bool)) <br />
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## GET
+/users/me - Get current user profile. <br />
+/users/id - Get user by ID. <br />
+/users/id/avatar - Get user avatar by ID. <br />
+/tasks?sortBy=createdAt:desc - Get all task of current user. <br />
+/tasks/id - Get task by ID. <br />
+
+## PATCH
+/users/me - Update user profile. Inputs->(name,email,password,age) <br />
+/tasks/id - Update task by ID. <br />
+
+## DELETE
+/users/me - Delete current user. <br /> 
+/users/me/avatar - Delete User avatar. <br />
+/tasks/id - Delete task by ID. <br />
+
+
+
+
